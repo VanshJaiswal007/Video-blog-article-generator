@@ -7,18 +7,19 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div style="max-width: 800px; margin: 0 auto; padding: 2rem;">
+  <div class="container">
     <h1>Video Blog Article Generator</h1>
-    <form id="videoForm" style="margin-bottom: 2rem;">
+    <form id="videoForm">
       <label for="videoUrl">YouTube Video URL:</label><br />
-      <input type="text" id="videoUrl" placeholder="Enter YouTube URL" required
-             style="width: 100%; padding: 0.5rem; margin-top: 0.5rem;" />
-      <br />
-      <button type="submit" style="margin-top: 1rem; padding: 0.5rem 1rem;">Generate Article</button>
+      <input type="text" id="videoUrl" placeholder="Enter YouTube URL" required />
+      <button type="submit">Generate Article</button>
     </form>
-    <p id="error" style="color: red;"></p>
-    <div id="result" style="white-space: pre-wrap;"></div>
+    <!-- Loader element -->
+    <div id="loader" class="hidden">Loading...</div>
+    <p id="error" class="error"></p>
+    <div id="result" class="result"></div>
   </div>
   <script src="script.js"></script>
 </body>
 </html>
+
